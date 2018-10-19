@@ -166,13 +166,14 @@ public class Worker implements Runnable{
 					try {
 						
 						Float mark = Float.parseFloat(this.config.getPayCapitalProtection());
-						int protection = (int)  ( mark + (  mark *  (  12/88)  )) ;
-		                if(mark>44){
-		                    protection = (int) Math.ceil(mark );
+						//int protection =  (mark.intValue() );
+						Float protection =    ( mark + (  mark *  (  (float)12/(float)88)  )) ;
+		                if(protection>44){
+		                    protection =   (float) Math.ceil(protection );
 		                }else{
 		                   // protection =   protection  ;
-		                }
-		                call = contract.buy(new BigInteger(this.config.getPayLockdownStages()), new BigInteger(  String.valueOf(protection )  ), value);//.buy( new Uint256(new BigInteger(this.config.getPayLockdownStages())), new Uint256(new BigInteger(  String.valueOf(protection )  )) , value );
+		                } 
+		                call = contract.buy(new BigInteger(this.config.getPayLockdownStages()), new BigInteger(  String.valueOf(protection.intValue() )  ), value);//.buy( new Uint256(new BigInteger(this.config.getPayLockdownStages())), new Uint256(new BigInteger(  String.valueOf(protection )  )) , value );
 						 
 						String hash = call.send().getTransactionHash();
 						System.out.println("config name is :"+config.getConfigName()+ ", confirm pay  :"+Convert.fromWei(value.toString(), Convert.Unit.ETHER)  +"ETH, hash="+hash  );
