@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import com.fairdapp.bank.helper.runner.apexone.runner.ApexoneMain;
 import com.fairdapp.bank.helper.runner.bank.Run;
+import com.fairdapp.bank.helper.runner.bankfomo.BankFomoRun;
+import com.fairdapp.bank.helper.runner.exchange.runner.ExchangeMain;
 
 public class MainEntry {
 
@@ -33,7 +36,39 @@ public class MainEntry {
 		
 		String filepath = Command.cmd.get(Command.filepath  );
 		
-		if("bank".equals(Command.cmd.get(Command.runtype  ) )  ) {
+		
+		
+		
+		if("bankfomo".equals(Command.cmd.get(Command.runtype  ) )  ) {
+			File currentFilePath = new File("./");
+			String data = currentFilePath.getAbsolutePath()+File.separator+"bankfomoconfig";
+			String[] args = new String[] { /*filepath*/data };
+			if(filepath!= null && !filepath.isEmpty()) {
+				args = new String[] {  filepath  };
+			}
+			System.out.println( data );
+			BankFomoRun.main(args);
+		}else if("exchange".equals(Command.cmd.get(Command.runtype  ) )  ) {
+			File currentFilePath = new File("./");
+			String data = currentFilePath.getAbsolutePath()+File.separator+"exchangeconfig";
+			String[] args = new String[] { /*filepath*/data };
+			if(filepath!= null && !filepath.isEmpty()) {
+				args = new String[] {  filepath  };
+			}
+			System.out.println( data );
+			ExchangeMain.main(args);
+		}else if("apexone".equals(Command.cmd.get(Command.runtype  ) )  ) {
+			File currentFilePath = new File("./");
+			String data = currentFilePath.getAbsolutePath()+File.separator+"apexoneconfig";
+			String[] args = new String[] { /*filepath*/data };
+			if(filepath!= null && !filepath.isEmpty()) {
+				args = new String[] {  filepath  };
+			}
+			
+			System.out.println( data );
+			 
+			ApexoneMain.main(args);
+		}else if("bank".equals(Command.cmd.get(Command.runtype  ) )  ) {
 			File currentFilePath = new File("./");
 			String data = currentFilePath.getAbsolutePath()+File.separator+"config";
 			String[] args = new String[] { /*filepath*/data };

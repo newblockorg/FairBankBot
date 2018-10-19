@@ -54,7 +54,7 @@ public class Worker implements Runnable{
         Credentials credentials = Credentials.create(ecKeyPair);
 		contract = Bank.load( this.config.getContractAddress() , web3j, credentials, gasPrice, gasLimit);
 		myselfAddress = credentials.getAddress();
-		sendTimes =   Integer.getInteger(config.getSendTimes(), 1);
+		sendTimes =   Integer.parseInt(  config.getSendTimes() );
 	}
 	
 	public   BigInteger getNonce( ) {

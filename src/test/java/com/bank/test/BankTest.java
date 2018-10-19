@@ -88,6 +88,14 @@ public class BankTest {
 	public   void getNonce( ) {
 		System.out.println( this.getNonce(this.web3j, this.myselfAddress).longValue() ) ;
 	}
+
+	@Test
+	public   void nickName( ) {
+		System.out.println( "nickname".matches("^[a-z0-9A-Z]+$" ) ) ;
+	}
+	
+	
+	//this.nickname.matches("^[a-z0-9A-Z]+$" ) 
 	
 	public   BigInteger getNonce(Web3j web3j, String addr) {
         try {
