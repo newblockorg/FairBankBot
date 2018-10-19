@@ -18,22 +18,3 @@ A jackpot bot for Fairdapp - Bank Simulator
 
 Warning: The bot is provided without any warranties, use at your own risk. The author did not check for all possible bugs related to this bot. 
 警告: 本软件作者不承担任何因机器人带来的任何后果和损失，本机器人没有经过完整的bug测试。
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-For advanced users:
-
-start.bat
-
-1.open ms-cmd   
-2.cd current path
-3.cmd :  
-	start.bat %config files path%  %java JDK path%
-	
-	exmaple 
-	start.bat ./config  C:\Program Files\Java\jdk1.8.0_181  
-	start.bat ./config         # stop here stop here '#'  , if already install jdk and set  JAVA_HOME ENV
-	start.bat G:\new_block_project\helper\src\main\resources   C:\Program Files\Java\jdk1.8.0_181
-	start.bat G:\new_block_project\helper\src\main\resources    # stop here stop here '#'  if already install jdk and set  JAVA_HOME ENV
-
-4. config.properties  for BankHelper.jar  , config.properties size >=1
