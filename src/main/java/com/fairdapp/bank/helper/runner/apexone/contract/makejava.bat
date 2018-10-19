@@ -1,0 +1,2 @@
+cd G:\new_block_project\helper\工具\web3j-3.5.0\bin
+ web3j solidity generate  --javaTypes  G:\new_block_project\helper\src\main\java\com\fairdapp\bank\helper\runner\apexone\contract\apexone.bin G:\new_block_project\helper\src\main\java\com\fairdapp\bank\helper\runner\apexone\contract\apexone.abi -o G:\new_block_project\helper\src\main\java -p com.fairdapp.bank.helper.runner.apexone.contract
